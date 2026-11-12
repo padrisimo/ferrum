@@ -14,8 +14,9 @@ vocabulary.
 ## Status
 
 **Phase 1 of 6 is in progress** (lexer, AST, parser). Specification v0.4.0 is
-frozen. Nothing compiles to a binary yet, and the build system is not in the
-repository yet. Everything below describes the target, not the present.
+frozen. The CMake build system is in place, but `ferrumc` does not compile
+anything yet (it only prints its version). Everything below describes the
+target, not the present.
 
 ## The niche
 
@@ -86,11 +87,14 @@ SPEC.md             Language specification (frozen at v0.4.0)
 NICHO.md            Niche definition: who Ferrum is for, and who it is not for
 ABI.md              Data layout and calling conventions
 CONTRIBUTING.md     How to contribute
+CMakeLists.txt      Build system (CMake 3.20+, C++20)
+src/                Compiler sources
+tests/              Tests, run with ctest
 .github/            Issue and pull request templates
 ```
 
-Source code (`src/`), tests (`tests/`) and examples (`examples/`) arrive in the
-following commits.
+The lexer, AST, parser and examples (`examples/`) arrive in the following
+commits.
 
 ## Contributing
 

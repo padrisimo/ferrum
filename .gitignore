@@ -1,0 +1,62 @@
+# --- Project context and local notes (not part of the repository) ------------
+# HANDOFF.md carries session-to-session context for AI coding agents.
+/HANDOFF.md
+/memory
+/memory.md
+.opencode/
+.claude/
+
+# --- Build output -------------------------------------------------------------
+/build/
+/build-*/
+/cmake-build-*/
+/out/
+Testing/
+CMakeUserPresets.json
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile.cmake
+install_manifest.txt
+
+# clangd / IDE compile database (CMake exports it into the build directory)
+compile_commands.json
+
+# --- Compiled artifacts -------------------------------------------------------
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+*.ll
+*.bc
+/ferrumc
+
+# --- Debugging, profiling, coverage -------------------------------------------
+.cache/
+*.dSYM/
+*.gcda
+*.gcno
+*.profraw
+*.profdata
+perf.data*
+callgrind.out.*
+core
+core.*
+vgcore.*
+
+# --- Editors and OS -----------------------------------------------------------
+.idea/
+.vscode/
+.vs/
+.fleet/
+*.user
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db

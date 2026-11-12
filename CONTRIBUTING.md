@@ -36,13 +36,17 @@ Repository: <https://github.com/padrisimo/ferrum>
 
 ## Building and testing
 
-The build system lands in the second commit of the project. Once it exists:
+You need CMake 3.20 or newer and a C++20 compiler (clang or gcc).
 
 ```sh
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
 cmake --build build
 ctest --test-dir build --output-on-failure
 ```
+
+To add a test, create `tests/test_<name>.cpp`: a plain `main()` that returns
+`0` on success. It is built and registered with `ctest` automatically (see
+`tests/README.md`).
 
 ## Commits
 
