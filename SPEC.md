@@ -217,7 +217,8 @@ type `bool`. `si x` with an integer `x` is an error.
 ### 4.6 Ranges **[P3]**
 
 `a..b` is the half-open range `[a, b)`, `a..=b` is the closed range `[a, b]`.
-Ranges appear in `per` loops.
+A range is only valid as the iterable of a `per` loop; it is not a general
+expression.
 
 ### 4.7 String interpolation **[P3]**
 
@@ -497,7 +498,8 @@ exit_stmt      = "exitus" call ;         (* stored as { callee, args } *)
 
 if_stmt      = "si" expr block { "aliter" "si" expr block } [ "aliter" block ] ;
 while_stmt   = "dum" expr block ;
-for_stmt     = "per" IDENT "in" expr block ;
+for_stmt     = "per" IDENT "in" iterable block ;
+iterable     = or_expr [ ( ".." | "..=" ) or_expr ] ;   (* a range is only valid here *)
 
 expr         = or_expr ;
 or_expr      = and_expr { "||" and_expr } ;
